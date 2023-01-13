@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    background-image: url(/static/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #FDFDFD;
+
+}
+
+.nav-wrapper{
+    background-color: rgba(66, 66, 66, 0.5);
+
+}
+
+.nav-wrapper a{
+    color:  #FDFDFD;
+    font-size: 115%;
+    opacity: 1;
+}
+
+.nav-wrapper .my_name{
+    color:  #FDFDFD;
+    font-size: 140%;
+    opacity: 1;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 45%;
+    letter-spacing: 3px;
+}
+
+.brand-logo{
+    font-family: 'Oswald', sans-serif;
+    margin-left: 3%;
+}
+
+.sidenav{
+    background-color: rgb(66, 66, 66);
+    height: min-content;
+
+}
+
+.basic_navbar:not(.brand-logo){
+    background-color: rgba(66, 66, 66, 0.5);
+}
+
+
+/* Retirar o nome principal caso a tela diminua */
+@media screen and (max-width: 992px) {   .my_name { display: none; } }
+
+#mobile-demo {
+    background-color: rgb(58, 58, 58);
+    
+}
+
+#mobile-demo a{
+    color: #FDFDFD;
+
+}
+
+#mobile-demo .spotter-menu{
+    color: #FDFDFD;
+    font-family: 'Oswald', sans-serif;
+    padding-left: 11%;
+    font-size: 115%;
+}
+
+.div-do-container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-training {
+
+    background-color: #2b2b2b8c;
+    margin-top: 2.5%;
+    width: 62rem;
+
+
+
+}
+
+.your-training{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.your-training h3{
+    text-align: center;
+    color: #FDFDFD;
+    font-family: 'Oswald', sans-serif;
+
+
+}
+
+@media (max-width: 600px) {
+    .your-training h5 {
+      text-align: center;
+    }
+  }
+
+.your-training #select-type{
+    display:flex;
+    width: 8rem;
+    height: 2rem;
+    text-align: center;
+    background-color: #3b3b3b;
+    color: #FDFDFD;
+    border: none;
+    border-radius: 15%;
+
+}
+
+
+hr{
+    border-color: white;
+
+}
+
+.training-table {
+    
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+.training-table table{
+    color: #FDFDFD;
+    font-size: 150%;
+    width: 50%;
+
+}
+
+.training-table td{
+    text-align: center;
+    font-size: 85%;
+}
+
+.training-table th{
+    text-align: center;
+    
+}
+
+
+.training-method{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    
+}
+
+.training-method label{
+    color: #FDFDFD;
+    font-size: 120%;
+    margin-left: 3%;
+
+}
+
+@media (max-width: 600px) {
+    .training-method {
+      flex-direction: column;
+    }
+  }
+
+.training-method #training-type{
+    display: flex;
+    width: 8rem;
+    height: 2rem;
+    margin-left: 1%;
+
+}
+
+.training-method #number-exercises{
+    display: flex;
+    width: 3rem;
+    height: 2rem;
+    margin-left: 1%;
+    margin-right: 3%;
+    background-color: #1f1e1ee8;
+    border-radius: 15%;
+    text-align: center;
+}
+
+#btn-submit{
+    width: 5rem;
+    height: 2rem;
+    background-color: #272727;
+    border-radius: 10%;
+    border-color: rgba(39, 39, 39, 0.719);
+    color: #FDFDFD;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+#btn-submit:hover{
+    width: 5rem;
+    height: 2rem;
+    background-color: #7c7c7c;
+    border-radius: 10%;
+    border-color: rgb(39, 39, 39);
+    color: #FDFDFD;
+    
+}
+
+
+
+.register-training #exercise-type{
+    display: block;
+    width: 7rem;
+    height: 2rem;
+    font-size: smaller;
+    text-align: center;
+
+    
+}
+
+.register-training #equipment{
+    display: block;
+    width: 7rem;
+    height: 2rem;
+    font-size: smaller;
+    text-align: center;
+}
+
+.register-training #sets{
+    width: 3rem;
+    height: 2rem;
+    background-color: #1f1e1ee8;
+    border-radius: 15%;
+    text-align: center;
+}
+
+.register-training #reps{
+    width: 3rem;
+    height: 2rem;
+    background-color: #1f1e1ee8;
+    border-radius: 15%;
+    text-align: center;
+}
+
+.register-training #weight{
+    width: 3rem;
+    height: 2rem;
+    background-color: #1f1e1ee8;
+    border-radius: 15%;
+    text-align: center;
+}
+
+.register-training #exercise-type{
+    text-align: center;
+    margin-left: 30%;
+}
+
+@media (max-width: 600px) {
+    .register-training #exercise-type{
+      margin: 0;
+    }
+  }
+
+#register-submit{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#register-submit input{
+    width: 10rem;
+    height: 4rem;
+    font-size: large;
+    background-color: #272727;
+    border-radius: 14%;
+    border-color: rgba(39, 39, 39, 0.719);
+    color: #FDFDFD;
+    font-family: 'Oswald', sans-serif;
+}
+
+#register-submit input:hover{
+    width: 10rem;
+    height: 4rem;
+    font-size: large;
+    background-color: #7c7c7c;
+    border-radius: 14%;
+    border-color: rgb(39, 39, 39);
+    color: #FDFDFD;
+}
