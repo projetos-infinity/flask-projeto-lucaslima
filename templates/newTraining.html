@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotter</title>
+
+    <link rel="stylesheet" href="static/style.css">
+
+    <!-- Fonte base do spotter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <!-- bloco cdn do materialize -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Jim Carry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script defer src="static/scripts.js"></script>
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="basic_navbar">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">SPOTTER</a>
+          <label class="my_name" id="my_name" for="">Meu nome</label>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Training Room</a></li>
+            <li><a href="newTraining.html">New training</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- Sidenav está reservado pelo materialize
+      estilo de tamanho tem que ser colocado por aqui -->
+      
+      <ul style="height: min-content;" class="sidenav" id="mobile-demo"> 
+        <li><label class="spotter-menu" for="">SPOTTER</label></li>
+        <li><a href="index.html">Training Room</a></li>
+        <li><a href="newTraining.html">New training</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+
+      <div class="div-do-container">
+      <div class="container-training">
+        <div class="your-training">
+            <h3>NEW TRAINING</h3>
+            <br>
+            <h5>Follow the instructions below to register a new training</h5>
+          </div>
+          <hr>
+                 
+        <div class="training-method">
+            <label  for="">Training type:</label>
+            <select name="" id="training-type">
+                <option value="peito">Peito</option>
+                <option value="costas">Costas</option>
+                <option value="ombro">Ombro</option>
+                <option value="trícpes">Tríceps</option>
+                <option value="bíceps">Bíceps</option>
+                <option value="perna">Perna</option>
+                <option value="outros">Outros</option>
+            </select>
+            <label for="">Number of exercises:</label>
+            <input type="text" id="number-exercises">
+            <button type="submit" value="Submit" id="btn-submit" onclick="addRow()">Submit</button>
+        </div>
+        
+        <div class="register-training">
+          
+      <form action="/criar_treino" method="post">         
+      <table class="centered">
+        <thead>
+          <tr>
+              <th>Exercise</th>
+              <th>Equipment</th>
+              <th>Sets</th>
+              <th>Reps</th>
+              <th>Weight</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td id="td-exercise-type">
+              <select name="exe-type" id="exercise-type">
+                <option value="BenchPress">BenchPress</option>
+                <option value="Decline BenchPress">Decline BenchPress</option>
+                <option value="Incline BenchPress">Incline BenchPress</option>
+                <option value="Pull Down">Pull Down</option>
+                <option value="Biceps Curl">Biceps Curl</option>
+                <option value="Shoulder Press">Shoulder Press</option>
+                <option value="Triceps extension">Triceps extension</option>
+              </select>
+            </td>
+            <td id="td-equipment">
+              <select name="exe-equip" id="exercise-type">
+                <option value="Machine">Machine</option>
+                <option value="Bar">Bar</option>
+                <option value="Dumbbells">Dumbbells</option>
+                <option value="Cable">Cable</option>
+              </select>
+            </td>
+            <td>
+              <input type="text" name ="v1" id="sets">
+            </td>
+            <td>
+              <input type="text" name ="v2" id="reps">
+            </td>
+            <td>
+              <input type="text" name ="v3" id="weight">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+            
+            
+        </div>
+        <hr>
+
+        <div id="register-submit">
+          <input type="submit" value="REGISTER!">
+        </div>
+        
+        </form>
+      
+      </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+          });
+        
+          // Or with jQuery
+        
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+          });
+
+
+    </script>
+</body>
+</html>

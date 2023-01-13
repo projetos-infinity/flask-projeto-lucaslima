@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Spotter</title>
+
+    <!-- Fonte base do spotter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <!-- bloco cdn do materialize -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Jim Carry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script defer src="static/scripts.js"></script>
+
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="basic_navbar">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">SPOTTER</a>
+          <label class="my_name" id="my_name" for="">Meu nome</label>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Training Room</a></li>
+            <li><a href="newTraining.html">New training</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- Sidenav está reservado pelo materialize
+      estilo de tamanho tem que ser colocado por aqui -->
+
+      <ul style="height: min-content;" class="sidenav" id="mobile-demo">
+        <li><label class="spotter-menu" for="">SPOTTER</label></li>
+        <li><a href="index.html">Training Room</a></li>
+        <li><a href="newTraining">New training</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+
+  <!-- <div class="your-training">
+    RETIRADO!
+    <h3>CHOOSE YOUR TRAINING</h3>
+    <br>
+    <select name="selecting" id="select-type">
+      <option value="peito-triceps">Peito/Tríceps</option>
+      <option value="costa-biceps">Costa/Biceps</option>
+      <option value="perna-ombro">Perna/Ombro</option>
+    </select>
+  </div> -->
+  <br>
+  <hr>
+
+  
+      <!-- TABELA DE TREINO -->
+  <div class="training-table">
+    <table class="highlight">
+      <thead>
+        <tr>
+            <th>Exercício</th>
+            <th>Equipamento</th>
+            <th>Séries</th>
+            <th>Repetições</th>
+            <th>Carga</th>
+            <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+          {% for exercicios in treinos %}
+          <tr>
+            <td>{{  exercicios.exercicio }}</td>
+            <td>{{  exercicios.equipamento }}</td>
+            <td>{{  exercicios.series }}</td>
+            <td>{{  exercicios.reps }}</td>
+            <td>{{  exercicios.peso }}</td>
+
+            <td><form action="/delete_treino", method="post">
+              <button class="waves-effect waves-light btn-small red"><i class="material-icons right">delete</i>Deletar</button>
+              <input type="hidden"  name="id" value="{{exercicios.id}}">
+          </form></td>
+          </tr>
+          {% endfor %}
+        
+
+        <!-- Botoes -->
+      </tbody>
+    </table>
+  </div>
+
+  <select name="selecting" id="select-type">
+    <option value="peito-triceps">Peito/Tríceps</option>
+    <option value="costa-biceps">Costa/Biceps</option>
+    <option value="perna-ombro">Perna/Ombro</option>
+  </select>
+
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+          });
+        
+          // Or with jQuery
+        
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+          });
+    </script>
+</body>
+</html>
