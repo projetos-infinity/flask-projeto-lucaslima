@@ -67,4 +67,4 @@ def delete_treino():
     apagar_treino_sql(request.form['id'])
     return redirect('/')
 
-app.run(debug=True)
+app.run(host='0.0.0.0', debug=True, port=81)
