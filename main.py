@@ -40,6 +40,7 @@ def buscar_treinos_sql():
 
 
 app = Flask(__name__)
+
 @app.route('/')
 def index():
     treinos = buscar_treinos_sql()
@@ -48,6 +49,10 @@ def index():
 @app.route('/newtraining')
 def new_training():
     return render_template('newTraining.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/criar_treino', methods=['POST'])
 def criar_treino():

@@ -302,3 +302,74 @@ hr{
     border-color: rgb(39, 39, 39);
     color: #FDFDFD;
 }
+
+.div-max-about {
+
+    display: flex;
+    justify-content: center;
+}
+
+.div-container-about {
+    background-color: #2b2b2b8c;
+    margin-top: 2.5%;
+    width: 62rem;
+
+
+}
+
+.aboutme {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.aboutme h3{
+    text-align: center;
+    color: #FDFDFD;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.content-about{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.text-about{
+    color: #FDFDFD;
+    font-family: 'Oswald', sans-serif;
+    width: 23rem;
+    font-size:medium;
+    text-align: justify;
+    margin-right: 40px;
+}
+
+
+
+
+.picture-about img{
+    width: 22rem;
+    height: 31rem;
+    
+}
+
+.working-features {
+    color: #FDFDFD;
+    font-family: 'Oswald', sans-serif;
+    font-size:medium;
+    text-align: center;
+
+}
+
+
+/* not working */
+
+/* .working-features ul{
+    list-style-type: disc;
+} */
