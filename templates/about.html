@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotter</title>
+
+    <link rel="stylesheet" href="static/style.css">
+
+    <!-- Fonte base do spotter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <!-- bloco cdn do materialize -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Jim Carry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script defer src="static/scripts.js"></script>
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="basic_navbar">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">SPOTTER</a>
+          <label class="my_name" id="my_name" for="">Meu nome</label>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/">Training Room</a></li>
+            <li><a href="/newtraining">New training</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="">Sign in/Sign out</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- Sidenav está reservado pelo materialize
+      estilo de tamanho tem que ser colocado por aqui -->
+      
+      <ul style="height: min-content;" class="sidenav" id="mobile-demo"> 
+        <li><label class="spotter-menu" for="">SPOTTER</label></li>
+        <li><a href="index.html">Training Room</a></li>
+        <li><a href="newTraining.html">New training</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+
+      <div class="div-max-about">
+        <div class="div-container-about">
+            <div class="aboutme">
+                <h3>ABOUT</h3>
+            </div>
+            <hr>
+            <div class="content-about">
+                <div class="text-about">
+                    <p>
+                        Dear User,
+                        <br>
+                        This app was created by me, Lucas, during a short term "Flask" course at Infinity School (Fortaleza - CE, Brazil).
+                        The Spotter was design specifically to register, store and read training programs, 
+                        being them simple or complex as training periodization.
+                        <br>
+                        Although this alpha version doesn't have all the features we all want, we'll
+                        keep our work to make this app fully functional and to deliver a pleasent user experience.
+                        <br>
+                        As for me, I'm Lucas, B.Sc in Physical Education and M.Sc in Physiology and Professor at the present moment.
+                        In the field of sport science, I was always doing research (academic), looking for answer
+                        and trying to solve problems for many different things regarding exercise. Coincidentally,
+                        I found many solutions for these problems in technology field and that's the reason that led
+                        me to learning a little more about sport technology.
+                        <br>
+                        Special thanks to NatorJunior for teaching me how to use flask.                      
+                    </p>
+                </div>
+                <div class="picture-about">
+                    <img src="static/img-about.jpeg" alt="">
+                </div>
+
+        </div>
+
+        <!-- MUDAR ESSAS WORKING FEATURES PARA LISTA -->
+
+        <hr>
+        <div class="aboutme">
+          <h3>WORKING FEATURES</h3>
+        </div>
+        <div class="working-features">
+          <p>Current version - Alpha 0.1</p>
+            <ul>
+              <li>*Create, read and delete exercises is now functional</li>
+              <li>*Partially optmized for mobile devices</li>
+          </ul> 
+
+        </div>
+        
+        <div class="aboutme">
+          <h3>NEXT UPDATE</h3>
+        </div>
+
+        <div class="working-features">
+            <ul>
+              <li>*Feature - Register multiple exercises at once</li>
+              <li>*Feature - Login system</li>
+              <li>*Optimization - Fully functional on mobile devices</li>
+              <li>*Optimization - Improve training room readability</li>
+              <li>*Optimization - Minor Changes on the app design</li>
+            </ul>
+        </div>
+
+      </div>
+    </div>
